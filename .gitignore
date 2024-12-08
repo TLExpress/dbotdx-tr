@@ -1,0 +1,14 @@
+# Ignore virtual environment
+venv/
+
+# Ignore Python cache files
+__pycache__/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore stored_tasks.json
+stored_tasks.json
+
+# Ignore Config files
+config.py

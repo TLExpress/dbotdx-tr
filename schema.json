@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "tasks": {
+        "type": "object",
+        "properties": {
+          "station": {
+            "type": "object",
+            "properties": {
+              "message_id": {
+                "type": "string",
+                "description": "The ID of the message associated with the station task"
+              },
+              "channel_id": {
+                "type": "string",
+                "description": "The ID of the channel associated with the station task"
+              },
+              "station_id": {
+                "type": "string",
+                "description": "The ID of the station"
+              },
+              "direction": {
+                "type": ["integer", "null"],
+                "description": "The direction of the train (0 for forward, 1 for backward, null for both)"
+              },
+              "count": {
+                "type": "integer",
+                "description": "The number of train services to display"
+              }
+            },
+            "required": ["message_id", "station_id", "count"],
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "required": ["tasks"],
+    "additionalProperties": false
+  }
